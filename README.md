@@ -9,6 +9,11 @@ a) Singleton - Single instance of a class and provides a global access point to 
            ConsTight Coupling,Threading Issues ,Lack of Flexibility
 b) Builder - construct complex objects step-by-step in a controlled and flexible manner. It separates the object construction process from its representation.
            Use Case -database configuration class,Building Queries, Messaging services
-           Implementation?create a Builder object,l methods on the Builder to set the desired properties of the product, call a build() method on the Builder to create the final product object.
+           Implementation?create a Builder object, methods on the Builder to set the desired properties of the product, call a build() method on the Builder to create the final product object.
            Pros - -Readability, Error Reduction,Flexibility
            Cons-Boilerplate Code (Potential): Introducing a builder can add extra classes and methods for simple objects.
+c)Prototype-Registry - centralized location to store and manage reusable prototype objects.
+           Use Case Configuration Object Cloning-
+           Implementation-Configuration Object Cloning,Efficient Invoice Generation, Object cloning for Social App users
+           Pros-Improved performance by reusing existing objects as prototypes,Reduced code duplication and Centralized management
+           Cons-Deep cloning can be complex for objects with intricate structures,Requires careful management of the registry to avoid memory leaks

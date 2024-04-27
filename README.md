@@ -27,4 +27,13 @@ a)Configuration Object Cloning-Define a Configurable interface with a clone meth
 b)Efficient Invoice Generation-Define an ObjectClonable interface with a clone method for deep copying invoices. Implement an InvoicePrototypeRegistry to manage prototype invoices and provide methods for adding, retrieving, and cloning them. 
 This avoids database calls and speeds up test invoice generation.
 c)Object Cloning in Testing- you to create prototype objects and clone them when needed, avoiding the overhead of setting up complex user objects repeatedly - Social media App
-   
+
+
+2 ways of cloning:
+Shallow Cloning:
+Creates a new object of the same type as the original object and Copies the references (memory addresses) to the original object's fields, not the actual values of those fields.
+Any changes made to the cloned object's fields will also affect the original object's fields because they both refer to the same underlying data.
+
+Deep Cloning:
+Creates a new object of the same type as the original object and Copies the actual values of the original object's fields into the corresponding fields of the new object.
+Changes made to the cloned object's fields do not affect the original object's fields because they hold independent copies of the data.

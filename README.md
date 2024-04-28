@@ -17,3 +17,8 @@ Source System's Action:
 
 The Iphone4sCharger object's charge() method is finally invoked, performing the actual charging logic specific to the 4s charger.
 
+NOTE:
+The IPhone6s doesn't need to know the specifics of the charger (4s) because it interacts through the adapter.
+The adapter acts as a bridge, translating the IPhone6s request into a compatible action for the Iphone4sCharger.
+This allows the IPhone6s to work with the Iphone4sCharger even though they wouldn't be directly compatible.
+

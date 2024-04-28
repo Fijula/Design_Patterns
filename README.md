@@ -58,4 +58,13 @@ A facade class acts as a single point of entry, encapsulating interactions with 
 The facade class might delegate tasks to different internal components but expose a simpler API for the client code.
 Example: Imagine a library with numerous functions for image manipulation. A facade could provide a few high-level functions like "resize" or "apply filter," simplifying the interaction for users who don't need to know the low-level details.
 
-c)
+c)Decorator Design Pattern
+
+d) Flyweight :Define a Flyweight interface that specifies the methods for managing and using flyweight objects.Implement a Flyweight Factory that creates and manages a pool of flyweight objects. It ensures efficient sharing and avoids creating duplicates.
+Concrete Flyweight classes implement the Flyweight interface and store the intrinsic state (unchanging data) of the object.
+Client code uses the Flyweight Factory to obtain flyweight objects. It then sets the extrinsic state (changeable data) as needed.
+ Use Case-Chess User Optimization (Each user object consumes memory, and you want to optimize the memory usage by only keeping one copy of fields that do not change.). One user can play multiple games simultaneously. At the moment, you create a new user object for each game,...graphical editing software.(The application must support rendering text with different fonts, sizes, and colors. The application must also support rendering images with different dimensions and formats. Joe is concerned about the memory overhead of creating multiple text and image objects with the same state.)
+ Pros-Reduced memory usage by sharing objects.Improved performance by avoiding redundant object creation.Easier to manage object state as intrinsic state is centralized in flyweight objects.
+ Cons-Increased complexity compared to simpler object creation.Requires careful consideration of which data is intrinsic and can be shared.Might not be suitable for objects with complex or frequently changing extrinsic state.
+
+ 

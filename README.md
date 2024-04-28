@@ -33,3 +33,29 @@ d)Factory - bject creation interface, letting subclasses decide which class to i
               Use Case-Social Media Aggregator(create adapter classes for different social media platform APIs,conform to a common interface,easy to integrate new platforms in the future.Adapter Pattern for Language Translation(integrate with different translation services like Google Translate, Microsoft Translator, and Yandex)
               Pros-Decoupling,Improved Maintainability,Flexibility(introduce new adapters for different types ),Reusability( incompatible objects to work together)
               Cons - Increased Complexity,Performance Overhead
+ b) Facade - Hide the complex Implementation(System Complexities) from the Client
+             Use Case- Image Editing(offers various features like loading images, applying filters, adjusting brightness, and saving images. The editing module has complex interactions and dependencies. Your goal is to simplify the interface for users by providing a unified way to access and control these editing functionalities),Data Analysis(The application involves data collection, preprocessing, analysis algorithms, and visualization. The interactions between these components can become complex),Travel Booking App( needs to handle bookings, payments, and notifications through different external services. The goal is to provide a simplified interface for customers and internal modules to perform booking-related tasks without directly dealing with the intricacies of each external service.)
+            Pros-
+            Cons-
+
+   Adapter Pattern:
+Adapter and Facade Differnce
+Adapter:
+Adapter Pattern:
+Focus: Bridges compatibility gaps between incompatible interfaces.
+Goal: Enables objects with different interfaces to work together seamlessly.
+Structure:
+Interfaces define expected functionalities for each system.
+Concrete classes implement the interfaces for specific objects.
+An adapter class implements the target interface and translates requests to the source system's compatible actions.
+Example:the Iphone4sTo6sAdapter lets the iPhone 6s (with IPhone interface) use a 4s charger (with a different charging mechanism represented by Iphone4sCharger).
+
+Facade Pattern:
+Focus: Simplifies a complex interface by providing a simpler, unified interface.
+Goal: Makes a large system or library easier to use by hiding its internal complexity.
+Structure:
+A facade class acts as a single point of entry, encapsulating interactions with multiple underlying objects or subsystems.
+The facade class might delegate tasks to different internal components but expose a simpler API for the client code.
+Example: Imagine a library with numerous functions for image manipulation. A facade could provide a few high-level functions like "resize" or "apply filter," simplifying the interaction for users who don't need to know the low-level details.
+
+c)

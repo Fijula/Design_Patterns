@@ -1,8 +1,19 @@
-In Depth of Design Patterns :
-What are Design patterns :design patterns are reusable solutions to common software design problems. 
-Creational Design Patterns :
-a) Singleton - Single instance of a class and provides a global access point to it - Loggin, Session, Cache, Drivers
-           how to implement? Constructor private, public method to return Instance,  make instance type static
-           types of implementation?lazy,eager,thread safe- syncronzed method,thread safe- synchronized block (double check/double locking mechanizm) ,Bill pugh and Enums
-           Use Case- File based configuration manager, Logger, Connection loop 
-           
+Iphone6 to use Iphone 4s Charger:
+Define Interfaces: Charger (Charge method) and Iphone(OnCharge())
+
+ Implement Concrete Classes:Iphone4sCharger,IPhone6s
+ 
+ Introduce the Adapter:Iphone4sTo6sAdapter-It implements the Charger interface, making it compatible with the IPhone6s that expects a Charger object.
+Inside the adapter, it holds a reference to an Iphone4sCharger object, representing the actual charger you're using.
+
+Adapter's Functionality:
+When the IPhone6s.OnCharge() method is called:
+The IPhone6s object doesn't know how to charge itself directly. It relies on the injected Charger dependency (which is actually the adapter in this case).
+The IPhone6s calls the charge() method on the adapter (Iphone4sTo6sAdapter).
+Since the adapter implements Charger, the IPhone6s doesn't see any difference.
+Inside the adapter's charge() method, it delegates the call to the Iphone4sCharger instance it holds. This translates the IPhone6s request to a compatible action for the 4s charger.
+
+Source System's Action:
+
+The Iphone4sCharger object's charge() method is finally invoked, performing the actual charging logic specific to the 4s charger.
+

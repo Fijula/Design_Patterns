@@ -67,4 +67,16 @@ Client code uses the Flyweight Factory to obtain flyweight objects. It then sets
  Pros-Reduced memory usage by sharing objects.Improved performance by avoiding redundant object creation.Easier to manage object state as intrinsic state is centralized in flyweight objects.
  Cons-Increased complexity compared to simpler object creation.Requires careful consideration of which data is intrinsic and can be shared.Might not be suitable for objects with complex or frequently changing extrinsic state.
 
+
  
+3)BEHAVIUORAL DESIGN PATTERN
+a) Stratergy Design pattern :allows you to dynamically change the behavior of an object at runtimeIt's like having different tools in your toolbox and choosing the right one for the job at hand.
+ Use case : Stock Trading Indicators(application currently calculates various trading indicators such as moving averages, momentum, and volatility. These indicators are used to make decisions about buying, selling, or holding stocks),Refactoring Pricing Calculation(pricing calculator for a ride-sharing app. The existing pricing manager class (PricingManager) uses a monolithic approach to calculate ride prices based on different strategies: distance-based, time-based, and surge pricing. The goal is to refactor the code to use the Strategy pattern, allowing for more flexible pricing strategies and better maintenance.),Video Streaming Quality Adjustment(video streaming platform that offers different streaming qualities, such as low, standard, and high definition. The platform should dynamically adjust the streaming quality based on the user's network conditions to ensure smooth playback. Additionally, more quality adjustment algorithms may be added in the future)
+ Pros-Open/Closed Principle: ,Reusability,Flexibility: You can easily add new algorithms (strategies) without modifying existing code.Maintainability: The core logic of each algorithm is encapsulated within a separate class, making the code easier to understand, test, and maintain. 
+ Cons- Increased Complexity: Introducing interfaces, concrete strategies, and a context class can increase the overall complexity of the codebase, especially for simpler scenarios and Performance Overhead
+ 
+
+ * Difference between Stratergy and Decorator :
+ -> Stratergy : Focus: Dynamically changing the behavior of an algorithm at runtime.
+Goal: Allows you to choose and swap between different implementations of an algorithm based on specific criteria.
+ -> Decorator- Focus: Adding or modifying the behavior of an object at runtime in a layered fashion.Goal: Extend the functionality of an object without changing its core structure or subclassing it.

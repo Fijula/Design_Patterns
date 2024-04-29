@@ -113,5 +113,10 @@ Concrete AI subclasses (e.g., AggressiveAI, DefensiveAI) override the decision-m
 
    Pros: Reusability,Flexibility,Maintainiblity
    Cons- Potential of ver use, Hook misuse(overriding),Complexiity High
-   
 
+   d)Proxy Design Pattern:he Proxy Design Pattern provides a surrogate or placeholder for another object, controlling access to, modifying, or enhancing the functionality of the original object.
+   
+    Use Case:Access Control: The proxy can restrict access to the RealSubject based on permissions, authentication, or other criteria. This ensures that only authorized users or code can interact with the object.
+    Pros - Enhanced security by restricting access to sensitive objects,Decoupling the client code from the concrete implementation of the RealSubject.
+    Cons- Increased complexity by introducing an additional layer of indirection.
+Potential performance overhead due to the extra method calls involved.

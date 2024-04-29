@@ -1,14 +1,12 @@
-1)Define Template Class:
+Real Subject (Bank Account): This represents your actual bank account where your money is stored. It has methods like getBalance() and withdraw(amount).
 
-2)Create a class (Template) that outlines the skeleton of the algorithm.
-It defines an operation with specific steps (methods) that subclasses can override.
-Some steps might have default implementations for common functionality.
-Implement Concrete Subclasses:
+Proxy (ATM): This acts as the intermediary between you and your bank account. It implements the same interface (or similar functionality) as the bank account but might have additional controls or functionalities.
 
-3)Create subclasses that inherit from the Template class.
-These classes override specific steps to provide specialized behavior for their needs.
-They call the template operation (defined in the parent class) to execute the overall flow, including the default implementations and overridden methods.
-Client Code Interaction:
+Workflow:
 
-4)Client code creates an instance of a concrete subclass.
-It can call the template operation on the instance, which triggers the execution of the complete algorithm with specialized behavior injected by the overridden steps.
+You (the client) interact with the ATM (the proxy) by inserting your card and entering your PIN.
+The ATM (proxy) verifies your identity and PIN (potentially using additional security measures not exposed to you).
+If the verification is successful, the ATM (proxy) then communicates with the bank's system (the real subject) to:
+Check your account balance using the getBalance() method.
+If there are sufficient funds, withdraw the requested amount using the withdraw(amount) method.
+The ATM (proxy) dispenses the cash and provides you with a receipt.

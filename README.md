@@ -70,10 +70,25 @@ Client code uses the Flyweight Factory to obtain flyweight objects. It then sets
 
  
 3)BEHAVIUORAL DESIGN PATTERN
+
 a) Stratergy Design pattern :allows you to dynamically change the behavior of an object at runtimeIt's like having different tools in your toolbox and choosing the right one for the job at hand.
  Use case : Stock Trading Indicators(application currently calculates various trading indicators such as moving averages, momentum, and volatility. These indicators are used to make decisions about buying, selling, or holding stocks),Refactoring Pricing Calculation(pricing calculator for a ride-sharing app. The existing pricing manager class (PricingManager) uses a monolithic approach to calculate ride prices based on different strategies: distance-based, time-based, and surge pricing. The goal is to refactor the code to use the Strategy pattern, allowing for more flexible pricing strategies and better maintenance.),Video Streaming Quality Adjustment(video streaming platform that offers different streaming qualities, such as low, standard, and high definition. The platform should dynamically adjust the streaming quality based on the user's network conditions to ensure smooth playback. Additionally, more quality adjustment algorithms may be added in the future)
  Pros-Open/Closed Principle: ,Reusability,Flexibility: You can easily add new algorithms (strategies) without modifying existing code.Maintainability: The core logic of each algorithm is encapsulated within a separate class, making the code easier to understand, test, and maintain. 
  Cons- Increased Complexity: Introducing interfaces, concrete strategies, and a context class can increase the overall complexity of the codebase, especially for simpler scenarios and Performance Overhead
+
+ b)State: object to alter its behavior when its internal state changes. It essentially creates separate objects to represent different states of an object, promoting cleaner and more manageable code.
+  Use Case:
+  a)Traffic Light:States: RedState, YellowState, GreenState.Behavior: Each state object controls the light duration and Context: The traffic light object manages state transitions nd delegates light control to the current state object.
+  b)Vending Machine:States: HasMoneyState, NoMoneyState, SoldoutState.Behavior: Each state object handles user interactions (e.g., insert money, select product, return money) based on the current state (has money, no money, out of stock).Context: The vending machine object manages state transitions (e.g., insert money -> HasMoneyState) and delegates actions to the current state object.
+c)Game Character:States: RunningState, JumpingState, AttackingState.Behavior: Each state object handles character movement and actions (e.g., move left/right, jump, attack) according to the current state (running, jumping, attacking).Context: The game character object manages state transitions (e.g., jump button pressed -> JumpingState) and delegates actions to the current state object.
+
+
+  Pros:Clearer State Management:,Improved Maintainability,Flexiblity
+  cons:Increased Complexity,State Explosion: ,Overuse
+
+ * Differnce between State and Strategy Design Pattern :
+ * State Design Pattern-Focus - Internal state of the object , Encapsulate behavior based on different states,State objects, context object holds reference to state,ex:Light switch with On/Off states
+ * Strategy -Focus External criteria (not necessarily internal state),Dynamically change algorithm based on chosen strategy,Interface, concrete strategies, context holds reference to strategy,ex :Sorting by name, attack power, etc.
  
 
  * Difference between Stratergy and Decorator :

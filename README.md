@@ -76,12 +76,11 @@ a) Stratergy Design pattern :allows you to dynamically change the behavior of an
  Pros-Open/Closed Principle: ,Reusability,Flexibility: You can easily add new algorithms (strategies) without modifying existing code.Maintainability: The core logic of each algorithm is encapsulated within a separate class, making the code easier to understand, test, and maintain. 
  Cons- Increased Complexity: Introducing interfaces, concrete strategies, and a context class can increase the overall complexity of the codebase, especially for simpler scenarios and Performance Overhead
 
- b)State: object to alter its behavior when its internal state changes. It essentially creates separate objects to represent different states of an object, promoting cleaner and more manageable code.
+ b)State Design : object to alter its behavior when its internal state changes. It essentially creates separate objects to represent different states of an object, promoting cleaner and more manageable code.
   Use Case:
-  a)Traffic Light:States: RedState, YellowState, GreenState.Behavior: Each state object controls the light duration and Context: The traffic light object manages state transitions nd delegates light control to the current state object.
-  b)Vending Machine:States: HasMoneyState, NoMoneyState, SoldoutState.Behavior: Each state object handles user interactions (e.g., insert money, select product, return money) based on the current state (has money, no money, out of stock).Context: The vending machine object manages state transitions (e.g., insert money -> HasMoneyState) and delegates actions to the current state object.
-c)Game Character:States: RunningState, JumpingState, AttackingState.Behavior: Each state object handles character movement and actions (e.g., move left/right, jump, attack) according to the current state (running, jumping, attacking).Context: The game character object manages state transitions (e.g., jump button pressed -> JumpingState) and delegates actions to the current state object.
-
+  i)Traffic Light:States: RedState, YellowState, GreenState.Behavior: Each state object controls the light duration and Context: The traffic light object manages state transitions nd delegates light control to the current state object.
+  ii)Vending Machine:States: HasMoneyState, NoMoneyState, SoldoutState.Behavior: Each state object handles user interactions (e.g., insert money, select product, return money) based on the current state (has money, no money, out of stock).Context: The vending machine object manages state transitions (e.g., insert money -> HasMoneyState) and delegates actions to the current state object.
+iii)Game Character:States: RunningState, JumpingState, AttackingState.Behavior: Each state object handles character movement and actions (e.g., move left/right, jump, attack) according to the current state (running, jumping, attacking).Context: The game character object manages state transitions (e.g., jump button pressed -> JumpingState) and delegates actions to the current state object.
 
   Pros:Clearer State Management:,Improved Maintainability,Flexiblity
   cons:Increased Complexity,State Explosion: ,Overuse
@@ -95,3 +94,24 @@ c)Game Character:States: RunningState, JumpingState, AttackingState.Behavior: Ea
  -> Stratergy : Focus: Dynamically changing the behavior of an algorithm at runtime.
 Goal: Allows you to choose and swap between different implementations of an algorithm based on specific criteria.
  -> Decorator- Focus: Adding or modifying the behavior of an object at runtime in a layered fashion.Goal: Extend the functionality of an object without changing its core structure or subclassing it.
+
+
+c)Template Design: skeleton of an algorithm in an operation, deferring some steps to subclasses. Subclasses (concrete classes) can override specific steps without changing the overall structure of the algorithm.The Template Design Pattern provides a solid foundation for creating reusable and flexible algorithms.
+
+  Use case:
+  i)Data Processing:
+
+Imagine a data processing application with a common pipeline for reading data, transforming it, and writing the results.
+The Template class defines the steps (read, transform, write) with default implementations for generic data handling.
+Concrete classes for specific data types (e.g., CSVProcessor, JSONProcessor) override the transformation step to handle format-specific details.
+ii)Network Requests:A base NetworkRequest class defines a template for making network requests.
+It includes steps like preparing the request, making the actual request, and handling the response (success or error).
+Concrete subclasses (e.g., GetRequest, PostRequest) override the preparation step to define URL formation and request body construction for specific actions (GET, POST).
+iii)Game AI:A base AI class defines a template for AI behavior in a game.
+It includes steps like sensing the environment, making decisions, and acting based on those decisions.
+Concrete AI subclasses (e.g., AggressiveAI, DefensiveAI) override the decision-making step to implement specific strategies based on AI type.
+
+   Pros: Reusability,Flexibility,Maintainiblity
+   Cons- Potential of ver use, Hook misuse(overriding),Complexiity High
+   
+

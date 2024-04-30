@@ -67,7 +67,7 @@ Client code uses the Flyweight Factory to obtain flyweight objects. It then sets
  Pros-Reduced memory usage by sharing objects.Improved performance by avoiding redundant object creation.Easier to manage object state as intrinsic state is centralized in flyweight objects.
  Cons-Increased complexity compared to simpler object creation.Requires careful consideration of which data is intrinsic and can be shared.Might not be suitable for objects with complex or frequently changing extrinsic state.
 
- 5) Bridge Design Pattern :t focuses on how classes and objects are composed to form larger structures, and how these structures impact the overall design.
+ e) Bridge Design Pattern :t focuses on how classes and objects are composed to form larger structures, and how these structures impact the overall design.
 It addresses the limitations of inheritance for abstraction, where a growing inheritance hierarchy can become tightly coupled and difficult to maintain.Core Concept: Composition over Inheritance
 
 The Bridge Pattern suggests separating the abstraction (interface) from its implementation using composition rather than inheritance.
@@ -78,6 +78,11 @@ Decoupling: Promotes loose coupling, making code more maintainable and easier to
 Scalability: Allows for independent growth of both the abstraction and implementation hierarchies.
     Cons- Potential Performance Overhead,Increased Complexity: Introduces additional classes (abstractions, implementations) that might seem like extra code, especially for simpler scenarios.
 
+f) Composite : ompose objects into tree structures and treat these structures as single objects. It provides a way to represent part-whole hierarchies where individual objects and collections of objects can be treated uniformly.
+
+     Use Case
+     Pros -Hierarchical Structures: Enables composing objects into trees to model complex relationships.Uniform Treatment: Allows treating individual objects and compositions of objects in a similar way.
+     Cons -Increased Complexity: Introduces additional classes (Component, Leaf, Composite) compared to a flat structure.Overuse Potentia(no need  for simple hierarchies)
 
  
 3)BEHAVIUORAL DESIGN PATTERN
@@ -137,6 +142,14 @@ e)Intrepretor Design Pattern -define a grammar for a language and an interpreter
     Pros- Extensible: New expressions can be added by creating new classes.Readable code: Logic can be expressed in a clear way using different expression objects.
 Cons:ncreased complexity for simple parsing tasks.Debugging can be challenging due to layered interpretations.
 
+f)Chain Of Responsibility- allows you to define a chain of objects that can handle a request one by one until the request is successfully processed or all handlers have been evaluated. It provides a flexible way to dynamically assign responsibility based on the request content.
+
+  Use Case
+  Event Handling: Passing events (e.g., mouse clicks, keyboard events) through a chain of handlers until one handles it. Authorization and Authentication: Chaining handlers to check different levels of access permissions.Logging: Passing logging requests through a chain of handlers based on severity level or categories.
+    Pros- Decoupling: Sender and receiver are decoupled, as the sender doesn't know which handler ultimately handles the request.Flexibility,Extensiblity
+    Cons-Potential Performance Overhead: Chaining can introduce some overhead due to the additional handler checks.Debugging Complexity: Can be challenging to debug chains with many handlers.Order Dependence: The order of handlers in the chain matters.
+
+    
     
 
 

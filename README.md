@@ -28,6 +28,19 @@ d)Factory - bject creation interface, letting subclasses decide which class to i
            Cons-Increased Complexity,Tight Coupling Between Factories,Overkill for Simple Cases
            Difference between Factory and Abstract Factory -> main differences between them is the level of abstraction. The Factory pattern deals with creating objects of a single type, while the Abstract Factory pattern deals with creating objects of related types. The Factory pattern is simpler and more flexible, but the Abstract Factory pattern is more robust and consistent. Another difference is the number of classes involved. The Factory pattern usually has one Factory class and one interface for the products, while the Abstract Factory pattern has one Abstract Factory interface, multiple concrete Factory classes, and multiple interfaces for the products. The Factory pattern is easier to implement and maintain, but the Abstract Factory pattern is more scalable and extensible.
 
+e) Abstract Factory:
+The Abstract Factory Design Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes. It builds upon the Factory Design Pattern by allowing the creation of multiple types of objects within a family at once.
+
+
+* Difference Between Factory Design and Abstract Design:
+           The Factory Design Pattern provides an interface for creating objects in a superclass, while allowing subclasses to decide which class to instantiat Whereas The Abstract Factory Design Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes
+          * Code Implemntation For Factory Design:
+           Factory Interface ,Concrete Factory Classes,Product Interface (Optional),
+Concrete Product Classes.
+  * Code Implemntation ForAbstract  Factory Design:
+  * Abstract Factory Interface,Concrete Factory Classes,Product Interfaces,Concrete Product Classes:
+
+  * 
 2. Structural Design Pattern :
    a) Adapter Design Pattern : allows objects with incompatible interfaces to collaborate. It acts as a bridge between two incompatible interfaces, enabling them to work together seamlessly.
               Use Case-Social Media Aggregator(create adapter classes for different social media platform APIs,conform to a common interface,easy to integrate new platforms in the future.Adapter Pattern for Language Translation(integrate with different translation services like Google Translate, Microsoft Translator, and Yandex)

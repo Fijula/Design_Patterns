@@ -58,8 +58,15 @@ A facade class acts as a single point of entry, encapsulating interactions with 
 The facade class might delegate tasks to different internal components but expose a simpler API for the client code.
 Example: Imagine a library with numerous functions for image manipulation. A facade could provide a few high-level functions like "resize" or "apply filter," simplifying the interaction for users who don't need to know the low-level details.
 
-c)Decorator Design Pattern
+c)Decorator Design Pattern -allows you to attach additional functionalities to an object dynamically, without altering its core structure. This provides a flexible way to customize objects at runtime and build up complex functionalities layer-by-layer.
+     use Case-Text Formatting:Component: Text interface with a getText() method returning the plain text.Concrete Component: PlainText class implementing Text and returning the base text.
+Decorators:BoldDecorator,ItalicDecorator: Italicizes the text.UnderlineDecorator
+Logging with Levels, UI frameworks might allow decorating UI components (buttons, text boxes)
+    Pros -Flexibility: Easily add new functionalities dynamically without changing existing code.Decoupling: Separates core functionality from optional features, promoting loose coupling.
+Open/Closed Principle
+    Cons-Increased Complexity: Introduces additional classes (decorators) compared to a simpler approach.Nested Calls: Decorated objects can involve multiple method calls, potentially affecting performance in some cases.Overuse Potential
 
+    
 d) Flyweight :Define a Flyweight interface that specifies the methods for managing and using flyweight objects.Implement a Flyweight Factory that creates and manages a pool of flyweight objects. It ensures efficient sharing and avoids creating duplicates.
 Concrete Flyweight classes implement the Flyweight interface and store the intrinsic state (unchanging data) of the object.
 Client code uses the Flyweight Factory to obtain flyweight objects. It then sets the extrinsic state (changeable data) as needed.

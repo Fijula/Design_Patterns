@@ -173,10 +173,19 @@ Pros:
 Loose Coupling: Objects communicate indirectly through the mediator, promoting maintainability and flexibility.
 Decoupling: Changes to individual objects don't impact other objects that communicate through the mediator.
 Simplified Communication:
-Cons:
-
-Complexity: Introduces an additional class (mediator) compared to a simpler, direct communication approach.
+Cons:Complexity: Introduces an additional class (mediator) compared to a simpler, direct communication approach.
 Centralized Control: The mediator becomes a central point of control, potentially creating a bottleneck if it manages too much communication.
 Overuse Potential: 
 
+i)Memento - allows an object to capture its internal state and restore it to a previous state without revealing the details of its implementation. This enables features like undo/redo functionality and checkpointing in applications.
 
+                Use case- Undo/Redo Functionality: In text editors, graphic design tools, and other applications, the Memento Design Pattern can be used to implement an undo/redo feature by storing snapshots of the object's state at different points in time.
+Checkpointing: In games or other applications where progress needs to be saved, the Memento Pattern can be used to create checkpoints by storing the state of the game or application at certain points.
+Transaction Processing: In database systems, the Memento Pattern can be used to capture the state of a transaction before any updates are made. If an error occurs, the state can be restored from the Memento.
+
+     Pros-Encapsulation: Memento objects encapsulate the state of the Originator, protecting it from direct modification by external code.
+Flexibility: The state can be restored to any previous checkpoint saved in a Memento object.
+Undo/Redo Functionality: Enables implementing undo/redo functionality by restoring previous states.Checkpointing: Facilitates checkpointing and recovery of object states.
+Cons:Complexity: Introduces additional classes (Memento, Caretaker) compared to a simpler approach.
+Memory Overhead: Storing a large number of Memento objects can consume memory.
+Performance Impact: Creating and restoring Memento objects can incur some overhead.

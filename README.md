@@ -163,5 +163,20 @@ News and Weather Updates: Weather or news services can work as subjects, notifyi
     Pros- Loose Coupling: The subject and observers know each other only through interfaces, promoting flexibility and maintainability.Decoupling: Changes to the subject don't directly impact observers, as they only interact through the interface.Dynamic Updates: New observers can be added or removed without modifying existing code.
     Cons -    Complexity: Can introduce additional classes (interfaces, subject, observers) compared to a simpler approach.Performance Overhead: Notifying a large number of observers can impact performance in some cases.Overuse Potential
 
+h)Mediator-  defines a central object, the mediator, to manage communication between a set of objects. This promotes loose coupling by eliminating direct dependencies between the objects that communicate. The mediator acts as an intermediary, facilitating communication and reducing complexity in systems with many interacting objects.
+
+    use Case- Chat Applications: As demonstrated in the provided code, the mediator can manage communication between users in a chat application, preventing direct dependencies between them.
+Graphical User Interfaces (GUIs): In a GUI, buttons, menus, and other UI elements can act as participants, while the main window acts as the mediator, coordinating events and interactions.
+Air Traffic Control: In air traffic control, the control tower can act as a mediator, coordinating communication and ensuring the safety of airplanes in flight.
+
+Pros: 
+Loose Coupling: Objects communicate indirectly through the mediator, promoting maintainability and flexibility.
+Decoupling: Changes to individual objects don't impact other objects that communicate through the mediator.
+Simplified Communication:
+Cons:
+
+Complexity: Introduces an additional class (mediator) compared to a simpler, direct communication approach.
+Centralized Control: The mediator becomes a central point of control, potentially creating a bottleneck if it manages too much communication.
+Overuse Potential: 
 
 

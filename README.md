@@ -131,3 +131,13 @@ Concrete AI subclasses (e.g., AggressiveAI, DefensiveAI) override the decision-m
     Pros - Enhanced security by restricting access to sensitive objects,Decoupling the client code from the concrete implementation of the RealSubject.
     Cons- Increased complexity by introducing an additional layer of indirection.
 Potential performance overhead due to the extra method calls involved.
+
+e)Intrepretor Design Pattern -define a grammar for a language and an interpreter that can execute or evaluate expressions written in that language. It provides a way to represent and process sentences or expressions in a structured manner. -EXPRESSION EVALUATOR -Differnt type of Expression pased, based on logic, value returned 
+    Use Case: Simple Language Interpretation: Parsing and evaluating arithmetic expressions, configuration files, or query languages.Natural Language Processing (NLP): Implementing simple chatbots or parsing commands based on grammar rules.Code Generation: Generating code from a high-level specification language.
+    Pros- Extensible: New expressions can be added by creating new classes.Readable code: Logic can be expressed in a clear way using different expression objects.
+Cons:ncreased complexity for simple parsing tasks.Debugging can be challenging due to layered interpretations.
+
+    
+
+
+

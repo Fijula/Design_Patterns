@@ -156,8 +156,12 @@ f)Chain Of Responsibility- allows you to define a chain of objects that can hand
     Pros- Decoupling: Sender and receiver are decoupled, as the sender doesn't know which handler ultimately handles the request.Flexibility,Extensiblity
     Cons-Potential Performance Overhead: Chaining can introduce some overhead due to the additional handler checks.Debugging Complexity: Can be challenging to debug chains with many handlers.Order Dependence: The order of handlers in the chain matters.
 
-    
-    
+g)Observer -establishes a one-to-many dependency between objects. When one object (the subject) changes state, all its dependent objects (observers) are notified and updated automatically. This pattern promotes loose coupling between objects and enables flexible communication structures.
+      Use Case- Event Monitoring: In GUI applications, buttons, text boxes, and other UI elements can act as subjects, notifying observers (event listeners) when clicked, typed into, etc.Stock Price Updates: A stock exchange service might act as a subject, notifying observers (brokerage applications, trading platforms) about stock price changes.
+News and Weather Updates: Weather or news services can work as subjects, notifying subscribed users (mobile apps, websites) about new information.
+
+    Pros- Loose Coupling: The subject and observers know each other only through interfaces, promoting flexibility and maintainability.Decoupling: Changes to the subject don't directly impact observers, as they only interact through the interface.Dynamic Updates: New observers can be added or removed without modifying existing code.
+    Cons -    Complexity: Can introduce additional classes (interfaces, subject, observers) compared to a simpler approach.Performance Overhead: Notifying a large number of observers can impact performance in some cases.Overuse Potential
 
 
 

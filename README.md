@@ -67,6 +67,17 @@ Client code uses the Flyweight Factory to obtain flyweight objects. It then sets
  Pros-Reduced memory usage by sharing objects.Improved performance by avoiding redundant object creation.Easier to manage object state as intrinsic state is centralized in flyweight objects.
  Cons-Increased complexity compared to simpler object creation.Requires careful consideration of which data is intrinsic and can be shared.Might not be suitable for objects with complex or frequently changing extrinsic state.
 
+ 5) Bridge Design Pattern :t focuses on how classes and objects are composed to form larger structures, and how these structures impact the overall design.
+It addresses the limitations of inheritance for abstraction, where a growing inheritance hierarchy can become tightly coupled and difficult to maintain.Core Concept: Composition over Inheritance
+
+The Bridge Pattern suggests separating the abstraction (interface) from its implementation using composition rather than inheritance.
+This decoupling allows for independent variations in both the abstraction and implementation without affecting each other.
+     Use Case -Device Drivers(Abstraction: Device driver interface defining operations like open(), close(), read(), and write().Concrete Abstraction : Specific device drivers like WindowsDriver, MacDriver, and LinuxDriver that extend the interface and provide platform-specific implementations.Implementation: Interface for different device types (e.g., IStorageDevice, IPrinterDevice).Concrete Implementation: Specific device implementations like HDD, SSD, LaserPrinter, and InkjetPrinter.),Media Processing with Different Formats and Algorithms:,GUI Frameworks with Pluggable Look and Feel:
+     Pros- Flexibility: Enables creating new combinations of abstractions and implementations easily.
+Decoupling: Promotes loose coupling, making code more maintainable and easier to extend.
+Scalability: Allows for independent growth of both the abstraction and implementation hierarchies.
+    Cons- Potential Performance Overhead,Increased Complexity: Introduces additional classes (abstractions, implementations) that might seem like extra code, especially for simpler scenarios.
+
 
  
 3)BEHAVIUORAL DESIGN PATTERN

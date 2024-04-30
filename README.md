@@ -189,3 +189,15 @@ Undo/Redo Functionality: Enables implementing undo/redo functionality by restori
 Cons:Complexity: Introduces additional classes (Memento, Caretaker) compared to a simpler approach.
 Memory Overhead: Storing a large number of Memento objects can consume memory.
 Performance Impact: Creating and restoring Memento objects can incur some overhead.
+
+
+j)Command - encapsulates a request as an object, allowing for parameterization of clients with requests, queuing or logging of requests, and undo/redo functionality. This pattern promotes loose coupling and improves code flexibility.
+
+     use case -Macro Commands: Group multiple operations into a single command object, allowing users to execute them together with a single action. (e.g., combining formatting commands in a text editor)
+Undo/Redo Functionality: Commands can be stored in a history, enabling undo/redo operations by reversing or replaying commands.
+Queuing Commands: Commands can be queued and executed in a specific order, useful for background tasks or batch processing.
+
+   Pros-Loose Coupling: Commands decouple the invoker from the receiver object performing the operation, promoting flexibility.s can be parameterized with different commands, allowing customization of behavior.Undo/Redo: Can facilitate undo/redo functionality by storing and reversing commands.Queuing: Commands can be queued for execution in a specific order.
+
+   Cons-Complexity: Introduces additional classes (interfaces, commands) compared to a simpler approach.Overhead: Creating and managing command objects can introduce some overhead.
+Overuse Potential.
